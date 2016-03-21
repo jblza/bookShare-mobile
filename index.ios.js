@@ -1,27 +1,6 @@
 'use strict';
 
-var React = require('react-native');
-var ExploreView = require('./ExploreView');
-var Login = require('./Login');
-var Signup = require('./signup');
+import React, { AppRegistry } from 'react-native';
+import App from './components/App.js';
 
-var styles = React.StyleSheet.create({
-  container: {
-    flex: 1
-  }
-});
-
-class BookShareApp extends React.Component {
-  render() {
-    return (
-      <React.NavigatorIOS
-        style={styles.container}
-        initialRoute={{
-          title: 'BookShare',
-          component: Signup,
-        }}/>
-    );
-  }
-}
-
-React.AppRegistry.registerComponent('bookshare', function() { return BookShareApp });
+React.AppRegistry.registerComponent('bookshare', () => App);
